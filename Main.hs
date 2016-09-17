@@ -75,7 +75,7 @@ genLoop it line rule = do
 
 main :: IO ()
 main = do
-  putStr "Enter how many itterations should be completed (Don't go above half of the character width of your terminal): "
+  putStr "Enter how many itterations should be completed (Keep below half of your terminal's width in characters): "
   its <- getInt 0 maxBound
   putStr "\nEnter a rule from 0 to 255: "
   ruleInt <- getInt 0 255
