@@ -69,7 +69,7 @@ getInt from to = do
 
 genLoop :: Int -> Line -> Rule -> IO ()
 genLoop it line rule = do
-  let line' = nextLine False line rule
+  let line' = nextLine (head line) line rule
   putStrLn $ lineToString line'
   Control.Monad.when (it <= length line `div` 2) $ genLoop (it+1) line' rule
 
